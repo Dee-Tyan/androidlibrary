@@ -15,7 +15,6 @@ jobs:
       - run:
           name: Build AndriodLib
           command: |
-            cd ..
             ./gradlew clean assemble
             
 
