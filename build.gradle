@@ -44,3 +44,11 @@ artifactory {
     clientConfig.setEnvVarsExcludePatterns('*password*,*secret*')
     clientConfig.setEnvVarsIncludePatterns('*not-secret*')
 }
+
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.8.2"
+}
+ 
+ 
