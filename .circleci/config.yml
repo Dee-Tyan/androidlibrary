@@ -14,8 +14,7 @@ jobs:
 
       - run:
           name: Build AndriodLib
-          command: |
-            ./gradlew clean assemble
+          command: ./gradlew clean assemble
             
 
 # Invoke jobs via workflows
