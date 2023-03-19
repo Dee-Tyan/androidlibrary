@@ -15,6 +15,14 @@ jobs:
       - run:
           name: Build AndriodLib
           command: ./gradlew clean assemble
+      - run:
+          name: Install and deploy
+          command: |
+            mvn deploy \
+              -Dmaven.test.skip=true \
+              -DskipTests=true \
+              -DaltDeploymentRepository=github::default::https://maven.pkg.github.com//Dee-Tyan/androidlibrary \
+              --settings ~/.m2/settings.xml
             
 
 # Invoke jobs via workflows
