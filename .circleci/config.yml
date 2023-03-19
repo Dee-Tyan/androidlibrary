@@ -12,19 +12,9 @@ jobs:
       - checkout
       - run: ./gradlew androidDependencies
 
-      - run: 
-         name: Install Android Studio and SDK
-         command: |
-              sudo apt-get update -y
-              sudo apt-get install -y openjdk-11-jdk
-              sudo apt-get install -y android-sdk
-
-
       - run:
           name: Build AndriodLib
-          command: |
-            cd androidlibrary
-            ./gradlew clean assemble
+          command: ./gradlew clean assemble
             
 
 # Invoke jobs via workflows
